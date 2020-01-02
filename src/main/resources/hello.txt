@@ -1,5 +1,0 @@
-hello scala
-hello flink
-how are you
-I fine
-and you
