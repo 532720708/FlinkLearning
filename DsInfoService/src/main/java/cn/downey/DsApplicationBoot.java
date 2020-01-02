@@ -1,13 +1,12 @@
-package cn.downey.dsinfoservice;
+package cn.downey;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DsInfoserviceApplication {
+public class DsApplicationBoot {
 
     public static void main(String[] args) {
-        SpringApplication.run(DsInfoserviceApplication.class, args);
+        SpringApplication.run(DsApplicationBoot.class,args);
     }
-
 }
