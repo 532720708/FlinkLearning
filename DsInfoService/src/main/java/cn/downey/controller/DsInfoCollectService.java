@@ -1,4 +1,4 @@
-package cn.downey.test;
+package cn.downey.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,4 @@
-package cn.downey.test;
+package cn.downey.controller;
 
 import java.io.BufferedOutputStream;
 import java.io.InputStream;
@@ -6,6 +6,9 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * ./kafka-topics.sh --create --zookeeper hadoop100:2181 --partitions 2 --replication-factor 2 --topic DSFlinkCreated topic "DSFlink".
+ */
 public class DsClientTest {
     public static void main(String[] args) {
         String message = "Kafka Test";
