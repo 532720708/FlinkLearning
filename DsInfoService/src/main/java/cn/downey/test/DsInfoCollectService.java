@@ -15,33 +15,34 @@ import java.io.PrintWriter;
 @RequestMapping("DsInfoCollectService")
 public class DsInfoCollectService {
 
-    @RequestMapping(value = "webInfoCollectService",method = RequestMethod.POST)
-    public void webInfoCollectService(@RequestBody String json, HttpServletRequest request, HttpServletResponse response){
-        System.out.println("come in");
+    @RequestMapping(value = "webInfoCollectService", method = RequestMethod.POST)
+    public void webInfoCollectService(@RequestBody String json, HttpServletRequest request, HttpServletResponse response) {
+        System.out.println("========\t" + json);
         //业务开始
 
         //业务结束
         PrintWriter printWriter = getWriter(response);
+        response.setStatus(HttpStatus.OK.value());
         printWriter.write("success");
         closePrintWriter(printWriter);
     }
 
-    private PrintWriter getWriter(HttpServletResponse response){
+    private PrintWriter getWriter(HttpServletResponse response) {
         response.setCharacterEncoding("utf-8");
         response.setContentType("application/json");
         OutputStream outputStream;
         PrintWriter printWriter = null;
-        try{
+        try {
             outputStream = response.getOutputStream();
             printWriter = new PrintWriter(outputStream);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return printWriter;
 
     }
 
-    private void closePrintWriter(PrintWriter printWriter){
+    private void closePrintWriter(PrintWriter printWriter) {
         printWriter.flush();
         printWriter.close();
 
