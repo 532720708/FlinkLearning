@@ -1,6 +1,8 @@
 package cn.downey.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,10 +17,14 @@ import java.io.PrintWriter;
 @RequestMapping("DsInfoCollectService")
 public class DsInfoCollectService {
 
+    @Autowired
+    private KafkaTemplate kafkaTemplate;
+
     @RequestMapping(value = "webInfoCollectService", method = RequestMethod.POST)
     public void webInfoCollectService(@RequestBody String json, HttpServletRequest request, HttpServletResponse response) {
         System.out.println("========\t" + json);
         //业务开始
+        kafkaTemplate.send("DSFlink", "key", json);
 
         //业务结束
         PrintWriter printWriter = getWriter(response);

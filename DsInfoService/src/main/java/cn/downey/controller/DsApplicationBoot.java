@@ -1,4 +1,4 @@
-package cn.downey;
+package cn.downey.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DsApplicationBoot {
 
     public static void main(String[] args) {
-        SpringApplication.run(DsApplicationBoot.class,args);
+        SpringApplication.run(DsApplicationBoot.class, args);
     }
 }

@@ -6,8 +6,11 @@
 
     <groupId>cn.downey.flink</groupId>
     <artifactId>DSFlinkAnaly</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
-
+    <modules>
+        <module>DsStreamingAnaly</module>
+    </modules>
 
 
 </project>

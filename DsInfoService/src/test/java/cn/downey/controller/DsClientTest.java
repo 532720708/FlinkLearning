@@ -7,7 +7,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
+ * 创建topic
  * ./kafka-topics.sh --create --zookeeper hadoop100:2181 --partitions 2 --replication-factor 2 --topic DSFlinkCreated topic "DSFlink".
+ * 消费者
+ * ./kafka-console-consumer.sh --zookeeper hadoop100:2181 --topic DSFlink
+ * 生产者
+ * ./kafka-console-producer.sh --broker-list hadoop100:9092 --topic DSFlink
  */
 public class DsClientTest {
     public static void main(String[] args) {

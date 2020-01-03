@@ -1,4 +1,4 @@
-package cn.downey.test;
+package cn.downey.kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
