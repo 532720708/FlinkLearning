@@ -29,9 +29,9 @@ public class UrlSendUtil {
             out.flush();
             String temp = "";
             InputStream in = conn.getInputStream();
-            byte[] tempbytes = new byte[1024];
-            while (in.read(tempbytes, 0, 1024) != -1) {
-                temp += new String(tempbytes);
+            byte[] tempBytes = new byte[1024];
+            while (in.read(tempBytes, 0, 1024) != -1) {
+                temp += new String(tempBytes);
             }
             System.out.println(conn.getResponseCode());
             System.out.println(temp);

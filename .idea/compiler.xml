@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="DsStreamingAnaly" />
         <module name="DsInfoService" />
+        <module name="DsAnalyCommon" />
         <module name="FlinkLearning" />
       </profile>
     </annotationProcessing>
