@@ -72,7 +72,7 @@ public class Kafka010Example {
 
         DataStream<KafkaEvent> input = env
                 .addSource(
-                        new FlinkKafkaConsumer010<KafkaEvent>(
+                        new FlinkKafkaConsumer010<>(
                                 parameterTool.getRequired("input-topic"),
                                 new KafkaEventSchema(),
                                 parameterTool.getProperties())
